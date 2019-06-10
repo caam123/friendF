@@ -17,10 +17,12 @@ module.exports = function(app){
     });
 
     // POSTS
+    //Its important to write the routes correctly, starting at least in this case with slash "/"
 
-    app.post("api/friends", function(req, res){
+    //When testing in postman itsnot quite working....
+    app.post("/api/friends", function(req, res){
         friendsData.push(req.body);
-        res.json(true);
+        
 
     });
 

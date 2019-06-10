@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
+        <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
 
 
     <title>Friend Finder!</title>
@@ -19,7 +19,7 @@
     <main class="container">
         <div class="row">
             <div class="col-sm12">
-                <form action="">
+                <form action="" id="survey">
                     <h1>Survey Questions</h1>
                     <hr>
                     <h3>
@@ -113,5 +113,47 @@
         </div>
     </main>
 </body>
+
+<script type="text/javascript">
+
+$("#submit").on("click", function(event){
+    event.preventDefault();
+    
+    //Creating the new Friend and also sending the info to find your match!
+    var newFriend = {
+        name: $("#name").val().trim(),
+        photo: $("#photo").val().trim(),
+        score: []
+    }
+    // Id para el form > select > por cada uno pushar el valor seleccionado al array de score de nuestra var-objeto del amigo que somos
+    $("#survey").find("select").each(function(){
+        newFriend.score.push($(this).val());
+    });
+
+    console.log(newFriend);    
+
+    //This like some kind AJAX call to send the info to a specific URL / route 
+    //Note the $.post and then we pass the object as an argument
+    $.post("/api/friends", newFriend,
+      function(data) {
+        alert("Finding your new friend...");
+        $("#name").val("");
+        $("#photo").val("");
+        $("#survey").find("select").each(function(){
+            $(this).val(1);
+        });
+    });
+
+
+});
+
+
+
+
+
+</script>
+
+
+
 
 </html>
