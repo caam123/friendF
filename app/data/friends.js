@@ -1,5 +1,5 @@
 
- var friendArray = [
+ var friendsData = [
   {
     name:"Charles Lee Ray AKA Chucky",
     photo:"https://en.wikipedia.org/wiki/Chucky_(character)#/media/File:Chucky_(Child's_Play).jpg",
@@ -54,4 +54,4 @@
   
 ];  
 
-module.exports = friendArray;
+module.exports = friendsData;
