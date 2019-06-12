@@ -52,11 +52,9 @@ module.exports = function(app){
             }
         }
 
-        console.log(bestMatchIndex);
-        console.log(minDiff);
-        //friendsData.push(user)
+        //After looping through the array we push the user, not before ! 
+        friendsData.push(user)
         res.json(friendsData[bestMatchIndex]);
-        //res.json(friendsData[bestMatchIndex]);
 
     });
 };

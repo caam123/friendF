@@ -106,12 +106,19 @@
                     <div class="col-sm-12">
                         <a href="api/friends">
                             <p>API Friends List
-                        </a> | <a href="https://github.com/caam123/friendF">GitHub Repo</a> </p>
+                        </a> <span>| </span><a href="https://github.com/caam123/friendF">GitHub Repo</a> </p>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+    <div id="test">
+        <p id="nameData"></p>
+        <p id="imgURL"></p>
+        <div>
+            <img id="radio" src="" alt="">
+        </div>
+    </div>
 </body>
 
 <script type="text/javascript">
@@ -123,25 +130,35 @@ $("#submit").on("click", function(event){
     var newFriend = {
         name: $("#name").val().trim(),
         photo: $("#photo").val().trim(),
-        score: []
+        scores: []
     }
     // Id para el form > select > por cada uno pushar el valor seleccionado al array de score de nuestra var-objeto del amigo que somos
     $("#survey").find("select").each(function(){
-        newFriend.score.push($(this).val());
+        newFriend.scores.push($(this).val());
     });
 
     console.log(newFriend);    
 
     //This like some kind AJAX call to send the info to a specific URL / route 
     //Note the $.post and then we pass the object as an argument
-    $.post("/api/friends", newFriend,
-      function(data) {
+    var currentURL = window.location.origin;
+
+    $.post(currentURL + "/api/friends", newFriend, function(data) {
         alert("Finding your new friend...");
+        //clear fields
         $("#name").val("");
         $("#photo").val("");
         $("#survey").find("select").each(function(){
             $(this).val(1);
         });
+
+        $("#nameData").text(data.name);
+        $("#imgURL").text(data.photo);    
+        $("#radio").attr("src", data.photo);
+        console.log(data);   
+ 
+        
+
     });
 
 
