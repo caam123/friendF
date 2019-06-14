@@ -31,12 +31,14 @@ App Link: [Friend Finder App](https://agile-meadow-13537.herokuapp.com/survey)
 
 ![Simple Diagram](images/portDiagram1.jpg)
 
-### 1. 'server.js'
+### 1. 
+`server.js`
 * Serves static files
 * Specifies dynamic port number
 * Requires de routing files ('htmlRoutes.js', 'apiRoutes.js')
 
-## 2. 'friends.js'
+## 2. 
+`friends.js`
 The information about friends is stored here:
 
 ```js
