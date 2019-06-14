@@ -15,7 +15,7 @@
 
 {
     name:"Frederick Charles Krueger",
-    photo:"https://en.wikipedia.org/wiki/Freddy_Krueger#/media/File:Freddy_Krueger_(Robert_Englund).jpg",
+    photo:"https://via.placeholder.com/150",
     scores:[
         2,
         1,
