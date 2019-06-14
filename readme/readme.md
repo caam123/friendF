@@ -1,7 +1,6 @@
 # Friend finder
 
-##### App Link
-[Friend Finder App](https://agile-meadow-13537.herokuapp.com/survey)
+App Link: [Friend Finder App](https://agile-meadow-13537.herokuapp.com/survey)
 
 ## Overview
 
@@ -28,12 +27,9 @@
 * nodemon
 * postman
 
-## Another helpful diagram
+# Project Architechture
 
 ![Simple Diagram](images/portDiagram1.jpg)
-
-
-# Project Architechture
 
 ### 1. 'server.js'
 * Serves static files
@@ -53,7 +49,7 @@ The information about friends is stored here:
 This info is useful to find your match and also it's updated everytime a user fills the form survey. 
 
 ## 3. Public 
-This folder contains the files necessary to display the page to the user, it includes `home.html`, 'survey.html'. Also css files (`styles.css`)  and the images if necessary. 
+This folder contains the files necessary to display the page to the user, it includes `home.html`, 'survey.html'. Also css files `styles.css`  and the images if necessary. 
 
 `survey.html` sends the answers from the user to /api/friends, which is then handled by 'apiRoutes'. In this file is where the best match is calculated, the user is pushed to `data.js` and then sends the answer to `survey.html` to display the info of the match found. 
 
@@ -61,9 +57,8 @@ This folder contains the files necessary to display the page to the user, it inc
 Handles the info for GET and POST between the files. 
 As said before, `apiRoutes`. is where the best match is calculated, the user is pushed to `data.js` and then sends the answer to `survey.html` to display the info of the match found in a toggle. 
 
-## Helpful visualization
+## Helpful and simple visualization
 This seems kinda complicated but it'll make sense (I guess...)
 
 ![Simple Diagram](images/portDiagram2.jpg)
-
 
