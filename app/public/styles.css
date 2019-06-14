@@ -1,16 +1,19 @@
 body{
     background-image: url("img/bcg2.jpg");
-    background-repeat: no-repeat, repeat;
+    background-repeat: no-repeat, no-repeat;
     background-size:cover;
+    background-attachment: fixed;
     color:lightgray;
     font-size: 20px;
+   
 }
 
 h1{
     text-transform: uppercase;
     padding: 1em 0;
-    border-bottom: 1px solid whitesmoke;
     color: whitesmoke;
+    font-family: 'Averia Sans Libre', cursive;
+    font-weight: bold;
 }
 
 hr{
@@ -18,9 +21,14 @@ hr{
 }
 
 h5{
-    color: lightsalmon;
+    color: white-smoke;
+    font-family: 'Averia Sans Libre', cursive;
 }
 
+h3{
+    font-family: 'Averia Sans Libre', cursive;
+    color:lightblue;
+}
 #submit{
     background-color:red;
     border: none;
@@ -44,6 +52,7 @@ h5{
     border:1px solid white;
     padding:2em;
     text-align: center;
+    background-color: rgba(0,0,0,0.5);
 }
 
 
@@ -57,9 +66,40 @@ h5{
     transition:5ms ease-in;
 }
 
-#goSurvey{
+#goSurvey,
+#submit{
     background-color: transparent;
-    padding-top:20px;
+    padding-top:15px;
     border: 2px solid white;
+    text-transform: uppercase;
+
 }
 
+#goSurvey:hover,
+#submit:hover{
+    background-color: white;
+    color:black;
+    transition: 500ms ease-in-out;
+}
+
+input[type="text"]{
+    background-color: transparent;
+    border:none;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+}
+
+input[type="text"]:focus{
+    background-color:rgba(0,0,0,0.5);
+    border:none;
+    border-bottom: 1px solid lightblue;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+select{
+    background-color: rgba(58,63,88,0.5) !important;
+    color:white!important;
+    border:0.5px solid lightblue!important;
+    border-radius: 0!important;
+}
