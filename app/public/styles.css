@@ -1,0 +1,33 @@
+body{
+    background-color:rgb(24, 0, 54);
+    color:lightgray;
+}
+
+h1{
+    text-transform: uppercase;
+    padding: 1em 0;
+    border-bottom: 1px solid whitesmoke;
+    color: whitesmoke;
+}
+
+hr{
+    border:1px solid white;
+}
+
+h5{
+    color: lightsalmon;
+}
+
+#submit{
+    background-color:red;
+    border: none;
+
+}
+
+#modalDisplay{
+    background-color:whitesmoke;
+}
+
+#friendPhoto{
+    width:100%;
+}

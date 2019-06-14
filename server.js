@@ -13,6 +13,8 @@ var PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+//static files for css and public stuff
+app.use(express.static("app/public"));
 // ================================================================================
 // ROUTER
 // ================================================================================
