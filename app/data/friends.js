@@ -2,7 +2,7 @@
  var friendsData = [
   {
     name:"Charles Lee Ray AKA Chucky",
-    photo:"https://en.wikipedia.org/wiki/Chucky_(character)#/media/File:Chucky_(Child's_Play).jpg",
+    photo:"https://www.rockandpop.cl/wp-content/uploads/2019/04/chucky-768x479.jpeg",
     scores:[
         1,
         2,
@@ -15,7 +15,7 @@
 
 {
     name:"Frederick Charles Krueger",
-    photo:"https://via.placeholder.com/150",
+    photo:"https://gcdn.emol.cl/los-80/files/2016/01/Freddy_krueger_1.jpg",
     scores:[
         2,
         1,
@@ -28,7 +28,7 @@
   
   {
     name:"Jason Voorhes",
-    photo:"https://es.wikipedia.org/wiki/Jason_Voorhees#/media/Archivo:WW_Chicago_2014_Contest_-_Jason_Voorhees_(14881804197).jpg",
+    photo:"https://t1.uc.ltmcdn.com/images/9/4/7/img_como_disfrazarse_de_jason_voorhees_2749_600.jpg",
     scores:[
         5,
         3,
@@ -41,7 +41,7 @@
   
   {
     name:"Michael Myers",
-    photo:"https://es.wikipedia.org/wiki/Michael_Myers#/media/Archivo:Wondercon_2015-8026_(16876251440).jpg",
+    photo:"https://thenypost.files.wordpress.com/2018/10/gettyimages-1056121808.jpg?quality=90&strip=all&w=618&h=410&crop=1",
     scores:[
         5,
         5,
