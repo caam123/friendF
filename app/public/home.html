@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+
 
     <title>Friend Finder!</title>
 </head>
+
 <body>
     <main class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="jumbotron">
-                    <h1><strong>Friend Finder!</strong></h1>
-                    <hr>
-                    <h3>Just answer a few questions and have fun with your new friend! :)</h3>
-                    <br>
-                    <br>
-                    <a href="/survey"><button type="button" class="btn btn-lg btn-primary">
+        <div class="row main-row justify-content-center">
+            <div class="textbox col-sm-12 col-md-6 align-self-center">
+                <h1><strong>Friend Finder!</strong></h1>
+                <h3>Just answer a few questions and have fun with your new friend! :)</h3>
+                <br>
+                <br>
+                <a href="/survey"><button id="goSurvey"type="button" class="btn btn-lg btn-primary">
                         <p> <strong>Go to Survey</strong></p>
-                    </button></a> 
-                </div>
+                    </button></a>
+            </div>
+            <div class="col-sm-12 text-center">
+                <a href="/api/friends">
+                    <p class="linksRepos">API Friends List
+                </a> | <a href="https://github.com/caam123/friendF">GitHub Repo</a> </p>
             </div>
         </div>
-            <div class="row">
-                <div class="col-sm-12">
-                <a href="/api/friends"><p>API Friends List</a>  | <a href="https://github.com/caam123/friendF">GitHub Repo</a> </p>
-                </div>
-            </div>
     </main>
 </body>
+
 </html>

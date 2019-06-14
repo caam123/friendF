@@ -1,6 +1,9 @@
 body{
-    background-color:rgb(24, 0, 54);
+    background-image: url("img/bcg2.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size:cover;
     color:lightgray;
+    font-size: 20px;
 }
 
 h1{
@@ -31,3 +34,32 @@ h5{
 #friendPhoto{
     width:100%;
 }
+
+.main-row{
+    height: 90vh;
+}
+
+.textbox{
+    width:auto;
+    border:1px solid white;
+    padding:2em;
+    text-align: center;
+}
+
+
+.linksRepos a{
+    color:lightblue;
+    text-decoration: none;
+}
+
+.linksRepos a:hover{
+    color:cyan;
+    transition:5ms ease-in;
+}
+
+#goSurvey{
+    background-color: transparent;
+    padding-top:20px;
+    border: 2px solid white;
+}
+
