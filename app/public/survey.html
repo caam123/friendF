@@ -21,20 +21,22 @@
     <main class="container">
         <div class="row">
             <div class="col-sm12">
-                <form action="" id="survey">
-                    <h1>Survey Questions</h1>
-                    
-                    <h3>
+                <form action="" id="survey" class="col-sm-12">
+
+                        <div class="surveyHeader">                   
+                        <h1>Survey Questions</h1>                        
+                        <h3>
+                            <br>
+                            <strong>About You</strong></h3>
                         <br>
-                        <strong>About You</strong></h3>
-                    <br>
-                    <h4>Name</h4>
-                    <input type="text" id="name" class="form-control" required>
-                    <br>
-                    <h4>Link to Photo Image (Required)</h4>
-                    <input type="text" id="photo" class="form-control" required>
-                    <br>
-                    <br>
+                        <h4>Name</h4>
+                        <input type="text" id="name" class="form-control" required>
+                        <br>
+                        <h4>Link to Photo Image (Required)</h4>
+                        <input type="text" id="photo" class="form-control" required>
+                        <br>
+                        <br>
+                        </div>
 
                     <h3><strong>Question 1</strong></h3>
                     <h5>What's your favorite day from Monday to Friday?</h5>
@@ -189,7 +191,11 @@
 
 $("#submit").on("click", function(event){
     event.preventDefault();
-    
+
+    if($("#name").val()=== "" || $("#photo").val() === ""){
+        alert("Please, fill in the blanks!");
+    }else{
+   
     //Creating the new Friend and also sending the info to find your match!
     var newFriend = {
         name: $("#name").val().trim(),
@@ -200,7 +206,6 @@ $("#submit").on("click", function(event){
     $("#survey").find("select").each(function(){
         newFriend.scores.push($(this).val());
     });
-
     console.log(newFriend);    
 
     //This like some kind AJAX call to send the info to a specific URL / route 
@@ -208,6 +213,7 @@ $("#submit").on("click", function(event){
     var currentURL = window.location.origin;
 
     $.post(currentURL + "/api/friends", newFriend, function(data) {
+      
         alert("Finding your new friend...");
         //clear fields
         $("#name").val("");
@@ -221,11 +227,12 @@ $("#submit").on("click", function(event){
         $("#friendPhoto").attr("src", data.photo);
         $("#modalDisplay").modal("toggle");
         console.log(data);   
- 
+      
         
 
     });
 
+}
 
 });
 
