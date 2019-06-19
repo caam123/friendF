@@ -29,7 +29,7 @@ App Link: [Friend Finder App](https://agile-meadow-13537.herokuapp.com/survey)
 
 # Project Architechture
 
-![Simple Diagram](images/portDiagram1.jpg)
+![Simple Diagram](readme/images/portDiagram1.jpg)
 
 ### 1. 
 `server.js`
