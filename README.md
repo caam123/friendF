@@ -1,4 +1,4 @@
-# friendF# Friend finder
+# Friend finder
 
 App Link: [Friend Finder App](https://agile-meadow-13537.herokuapp.com/survey)
 
