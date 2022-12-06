@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/caam123/friendF#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "path": "^0.12.7"
   }
 }
